@@ -19,6 +19,7 @@ export function SubPage({}: ISubPage) {
       setIsOpen(value);
     };
   };
+  console.log('@@test');
 
   return (
     <div className="container pt-5">
