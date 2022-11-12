@@ -39,11 +39,12 @@ export function SubPage({}: ISubPage) {
       </div>
 
       <button
-        className="p-2 bg-primary-600 text-white rounded-4"
+        className="p-2 bg-primary-600 text-white rounded-4 mb-2"
         onClick={onClickModal(true)}
       >
         모달 오픈
       </button>
+
       <BasicModal open={isOpen} onClose={onClickModal(false)} />
     </div>
   );
