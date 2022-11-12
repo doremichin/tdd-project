@@ -5,7 +5,7 @@ interface IPageTab {}
 
 export function PageTab({}: IPageTab) {
   return (
-    <div className="absolute border-t border-primary-100 bottom-0 left-0 right-0">
+    <div className="sticky z-10 bg-white border-t border-primary-100 bottom-0 left-0 right-0">
       <div className="container">
         <ul className="flex justify-between -mx-3">
           <li

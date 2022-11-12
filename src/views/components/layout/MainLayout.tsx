@@ -5,13 +5,13 @@ import PageTab from '../page-tab';
 
 export function MainLayout() {
   return (
-    <div>
+    <section className="relative">
       <Header />
       <main>
         <Outlet />
       </main>
       <PageTab />
-    </div>
+    </section>
   );
 }
 
