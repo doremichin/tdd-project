@@ -4,7 +4,7 @@ import Input from '@views/components/input/input';
 
 export function Header() {
   return (
-    <header className="border-b border-primary-100">
+    <header className="sticky top-0 left-0 right-0 border-b border-primary-100 bg-white">
       <div className="container">
         <div className="flex justify-between items-center">
           <Logo />
