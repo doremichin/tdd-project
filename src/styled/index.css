@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply text-text-default outline-0;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-[1200px] -mx-5 px-5 mx-auto;
+  }
+}
+
+@layer utilities {
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+}
