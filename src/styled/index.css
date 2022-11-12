@@ -4,7 +4,12 @@
 
 @layer base {
   * {
-    @apply text-text-default outline-0;
+    @apply outline-0;
+  }
+
+  html,
+  body {
+    @apply text-text-default;
   }
 }
 

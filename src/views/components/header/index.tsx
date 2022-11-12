@@ -1,6 +1,6 @@
 import React from 'react';
 import Logo from '@views/components/header/Logo';
-import Input from '@views/components/input/input';
+import Input from '@views/components/input/Input';
 
 export function Header() {
   return (
