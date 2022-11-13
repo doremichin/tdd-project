@@ -4,9 +4,10 @@ import { Switch } from '@headlessui/react';
 interface IToggle {
   onChange?: (value: boolean) => void;
   value?: boolean;
+  cyTag?: string;
 }
 
-const Toggle = ({ onChange, value }: IToggle) => {
+const Toggle = ({ onChange, value, cyTag }: IToggle) => {
   const [enabled, setEnabled] = useState(value || false);
 
   const handleChange = (checked: boolean) => {
@@ -19,6 +20,7 @@ const Toggle = ({ onChange, value }: IToggle) => {
 
   return (
     <Switch
+      data-cy={cyTag}
       checked={enabled}
       onChange={handleChange}
       className={`${

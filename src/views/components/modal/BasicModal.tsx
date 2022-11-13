@@ -4,9 +4,15 @@ interface IBasicModal {
   open: boolean;
   onSubmit?: () => void;
   onClose: () => void;
+  cyTag?: string;
 }
 
-const BasicModal = ({ onSubmit, open = false, onClose }: IBasicModal) => {
+const BasicModal = ({
+  onSubmit,
+  open = false,
+  onClose,
+  cyTag,
+}: IBasicModal) => {
   const handleSubmit = () => {
     onClose();
     if (onSubmit) {
@@ -15,7 +21,12 @@ const BasicModal = ({ onSubmit, open = false, onClose }: IBasicModal) => {
   };
 
   return (
-    <Dialog className="relative z-[999]" open={open} onClose={onClose}>
+    <Dialog
+      data-cy={cyTag}
+      className="relative z-[999]"
+      open={open}
+      onClose={onClose}
+    >
       <div className="fixed inset-0 bg-[#99999930]" aria-hidden="true" />
 
       <div className="fixed inset-0 flex items-center justify-center p-4">
@@ -29,6 +40,8 @@ const BasicModal = ({ onSubmit, open = false, onClose }: IBasicModal) => {
             Are you sure you want to deactivate your account? All of your data
             will be permanently removed. This action cannot be undone.
           </p>
+
+          <p>모달 열렸다구 테스트으~~</p>
 
           <button className="mr-2" onClick={handleSubmit}>
             확인

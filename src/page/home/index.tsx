@@ -17,6 +17,9 @@ export function Home({}: IHome) {
 
   return (
     <Fragment>
+      <Link data-cy="sub-button" className="" to="/sub">
+        subLink
+      </Link>
       <div>
         {data.results.map((photo, index) => {
           return (
@@ -26,7 +29,6 @@ export function Home({}: IHome) {
           );
         })}
       </div>
-      <Link to="/sub">home</Link>
     </Fragment>
   );
 }
