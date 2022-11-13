@@ -15,6 +15,8 @@ export function Home({}: IHome) {
     return <p>Error ...</p>;
   }
 
+  console.log('@@test');
+
   return (
     <Fragment>
       <Link data-cy="sub-button" className="" to="/sub">
