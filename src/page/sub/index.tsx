@@ -22,15 +22,16 @@ export function SubPage({}: ISubPage) {
   console.log('@@test');
 
   return (
-    <div className="container pt-5">
+    <div data-cy="sub-container" className="container pt-5">
       <div className="mb-2 flex">
         <span className="mr-2">스위치</span>
-        <Toggle value={isCheck} onChange={onChangeToggle} />
+        <Toggle cyTag="toggle" value={isCheck} onChange={onChangeToggle} />
       </div>
 
-      <div className="flex items-center mb-5">
+      <div data-cy="sub-content-box" className="flex items-center mb-5">
         <div
           className={cn([
+            'target-box',
             'w-[300px] h-[300px] flex-center text-white',
             isCheck ? 'bg-primary-600' : 'bg-primary-300',
           ])}
@@ -40,13 +41,18 @@ export function SubPage({}: ISubPage) {
       </div>
 
       <button
+        data-cy="modal-button"
         className="p-2 bg-primary-600 text-white rounded-4 mb-2"
         onClick={onClickModal(true)}
       >
         모달 오픈
       </button>
 
-      <BasicModal open={isOpen} onClose={onClickModal(false)} />
+      <BasicModal
+        cyTag="sub-modal"
+        open={isOpen}
+        onClose={onClickModal(false)}
+      />
     </div>
   );
 }
