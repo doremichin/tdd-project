@@ -28,7 +28,8 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "cypress": "cypress open"
+    "cypress:open": "cypress open",
+    "cypress:record": "cypress run --record --key c4fd1e09-6994-4595-b905-9e0373527cdb"
   },
   "eslintConfig": {
     "extends": [
